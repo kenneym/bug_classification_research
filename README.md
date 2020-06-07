@@ -1,7 +1,3 @@
-<p align="center">
-<img src="https://www.seguetech.com/wp-content/uploads/2019/05/segue-blog-agile-dev-pega-bpm.png">
-</p>
-
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kenneym/bug_classification/master)
 
 # <span style="color: darkturquoise;">Automated Bug Assignment for Agile Studio using Natural Language Processing </span>
