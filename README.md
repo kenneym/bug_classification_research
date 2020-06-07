@@ -1,7 +1,7 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kenneym/bug_classification/master)
-
 # <span style="color: darkturquoise;">Automated Bug Assignment for Agile Studio using Natural Language Processing </span>
 **Authors: Matt Kenney and Jake Epstein**
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kenneym/bug_classification_research/master)
 
 ## <span style="color: orange;">Preface for the John G. Kemeny Computing Prize </span>
 
