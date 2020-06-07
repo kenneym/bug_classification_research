@@ -15,6 +15,7 @@ certifi==2020.4.5.1
 chardet==3.0.4
 click==7.1.2
 cloudpickle==1.4.1
+cupy-cuda100==8.0.0b3
 cycler==0.10.0
 cymem==2.0.3
 decorator==4.4.2
@@ -23,6 +24,7 @@ dill==0.3.1.1
 docutils==0.15.2
 en-core-web-sm==2.2.5
 entrypoints==0.3
+fastrlock==0.5
 Flask==1.1.2
 future==0.18.2
 gast==0.2.2
@@ -117,9 +119,9 @@ spacy==2.2.4
 srsly==1.0.2
 tabulate==0.8.7
 tensorboard==2.0.2
-tensorflow==2.0.1
 tensorflow-datasets==3.1.0
 tensorflow-estimator==2.0.1
+tensorflow-gpu==2.0.1
 tensorflow-hub==0.8.0
 tensorflow-metadata==0.22.2
 termcolor==1.1.0
