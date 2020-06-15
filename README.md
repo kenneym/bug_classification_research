@@ -3,15 +3,12 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kenneym/bug_classification_research/master)
 
-## <span style="color: orange;">Preface for the John G. Kemeny Computing Prize </span>
-
-### Attribution
-We completed this project to build a natural language processing (NLP) machine learning model for the processing and classification of bug reports submitted by customers of Pegasystems Inc. (Pega). We completed this code base in its entirety, building out the training scripts, and deployment scripts, as well as all of the python notebooks that reflect the research we conducted that did not make it into production. We received advice along the way from an NLP researcher at Pegasystems, as well as feedback from our coworkers.
+## <span style="color: orange;">Preface</span>
 
 ### Project Significance:
 The NLP model we built processes bug reports submitted to Pegasystems Inc. It reads in said reports in email (HTML) format, processes them and analyzes them, and attempts to identify specifically which engineering team would be best suited to solve the bug at hand. In order to accomplish this task, our model must identify words and phrases within the email that can help identify where exactly the customer's problem may be originating with respect to Pegasystems' technology stack. If a bug report contained a significant number of terms related to cloud technology, for example, our classifier may classify that bug as being best addressed by the cloud engineering team at Pegasystems. Likewise, if a bug report contained references to UI elements ('button', 'sidebar', etc.), our classifier may determine that the bug is best addressed by the UI engineering team at Pega. To accomplish this task, a deep learning model was constructed to assign any given bug report to 1of 47 different engineering teams.
 
-Prior to the creation of this machine learning model, Pegasystems employees relied on manually assigning bug reports to the relevant engineering teams so that bugs could be investigated and resolved. This manual process resulted in a significant number of wasted man-hours at Pegasystems, an accumulation of unresolved bugs, and an inefficient system for addressing problems in the technology stack. The model we built will help to speed up the process of bug-report review and improve Pegasystems technology overall. It is estimated that this model will result in a multimillion dollar savings for Pegasystems Inc.
+Prior to the creation of this machine learning model, Pegasystems employees relied on manually assigning bug reports to the relevant engineering teams so that bugs could be investigated and resolved. This machine learning model will help to free up human work-hours for other tasks at Pegasystems, to prevent the accumulation of unresolved bugs (by assigning bugs immediately after they are recieved), and to address potential issues in Pega's technology stack more quickly and effectively.
 
 Because assigning a bug report to the incorrect engineering team would result in additional work and inconvenience for Pegasystems engineers, we constructed a system for confidence bounding that allows the model to notify its users about how confident it is in making a classification. Using this system for confidence bounding, we allow our model to assign bugs directly to the relevant engineering team when it is confident in making a prediction, and pass bugs for which it is unsure of the correct classification to a queue for human review. This confidence bounding system allows for an ideal balance between machine-driven automation and human intuition.
 
@@ -19,24 +16,24 @@ Although natural language processing algorithms abound in this day and age, we b
 
 Especially in cases in which model accuracy is of utmost importance, or in cases in which bias is a factor, closely monitoring model confidence is of serious importance. That being said, we believe the research community is in desperate need of accessible and straightforward methodologies for model confidence bounding… as well as other methods for model monitoring (ex: explainability metrics, bias metrics, etc.). We hope that our project and the library we will be publishing shortly to work with Monte Carlo Dropout in Tensorflow will help the machine learning research community to better address these issues.
 
-It is also worth noting that we use a custom preprocessing library that automates lemmatization, word stemming, and stop word removal. Jake’s Computational Linguistics (COSC 72) professor really liked this library, and thinks it could be published. 
- 
+
 ### A Note on the Codebase:
 
-The model we built is currently being placed into production at pegasystems with the help of a devops team. In order to prepare this model for production, we wrote significantly more code than is available in this submission to allow for the following features. 
+The model we built is currently being placed into production at pegasystems with the help of a devops team. In order to prepare this model for production, we wrote significantly more code than is shown in this repository to allow for the following features. 
 
-Allow the model to be retrained periodically on new bug report data collected from consumers. Automation scripts to obtain this data and retrain the model on a specified schedule without any human intervention necessary.
-Allow the model to take on new backlog IDs (representing new technology teams), or remove obsolete ones as needed.
-Production grade REST API that allows the model to be utilized by client applications in production.
+- Allow the model to be retrained periodically on new bug report data collected from consumers. 
+- Automation scripts to obtain this data and retrain the model on a specified schedule without any human intervention necessary.
+- Allow the model to take on new backlog IDs (representing new technology teams), or remove obsolete ones as needed.
+- Production grade REST API that allows the model to be utilized by client applications in production.
 
 Because these aspects of the code would uncover specific details about the deployment of our code on Pegasystems servers, we redacted these elements of our code base and returned our codebase to represent just our research efforts. Production-ready code is not included for security reasons. In addition, we redacted any elements of the code that were deemed to be proprietary and unsuitable for outside viewing.
 
-Finally, the data that was used to construct the machine learning model itself is proprietary (it consists of actual bug reports sent from pega users and is marked as confidential) and therefore cannot be shared with the review committee. We recognize that this poses a unique challenge in assessing our code, so we are happy to provide a demo of the code on our own machine so as not to violate these confidentiality constraints. Also note that all of our Jupyter notebooks have been run, and their outputs reflect the behavior of our code- therefore, our notebooks can be also used to evaluate the accuracy of our code. 
+Finally, the data that was used to construct the machine learning model itself is proprietary (it consists of actual bug reports sent from pega users and is marked as confidential) and therefore cannot be shared online. 
 
-We've added a 'launch binder' button that allows you to open up this codebase and view all of the included jupyter notebooks in a cloud-hosted jupyter environment for your convenience. Please let us know if there are any other requests you might have to make the assessment of our codebase more feasible.
+We've added a 'launch binder' button that allows you to open up this codebase and view all of the included jupyter notebooks in a cloud-hosted jupyter environment for your convenience.
+
 
 # README:
-
 
 ## <span style="color: orange;">Summary</span>
 
